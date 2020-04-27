@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/camera_container"
+    tools:context=".ui.upload.VideoUpload">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:text="record"
+            android:onClick="record"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:background="@drawable/round_corner_button"
+            android:id="@+id/record"
+            android:textColor="@android:color/white"
+            />
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:onClick="upload"
+            android:text="upload"
+            android:visibility="gone"
+            android:background="@drawable/round_corner_button"
+            android:id="@+id/upload"
+            android:textColor="@android:color/white"
+            android:layout_centerHorizontal="true"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

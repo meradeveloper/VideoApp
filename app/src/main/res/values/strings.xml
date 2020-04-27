@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">VideoAssignment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="permission_request">This app needs permission for camera and audio recording.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="message_need_permission">Need Permissions</string>
+    <string name="message_permission">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="title_go_to_setting">GOTO SETTINGS</string>
+    <string name="play_stop">Play or Stop</string>
+    <string name="Internet_Not_Available">Please provide Internet Connection for using !</string>
+    <string name="Add_Video">No video in the list, press on + button below for adding your own video !</string>
+</resources>
