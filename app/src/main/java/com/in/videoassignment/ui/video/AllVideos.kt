@@ -4,15 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
-import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.`in`.videoassignment.R
 import com.`in`.videoassignment.data.Status
-import com.`in`.videoassignment.data.Video
 import com.`in`.videoassignment.data.VideoRepo
 import com.`in`.videoassignment.ui.upload.VideoUpload
 import dagger.android.AndroidInjection
@@ -31,7 +28,6 @@ class AllVideos : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidInjection.inject(this)
-        supportActionBar
         hideSystemUI()
         setContentView(R.layout.activity_all_videos)
         if(isInternetAvailable())
@@ -43,7 +39,7 @@ class AllVideos : AppCompatActivity() {
                 if(it.status==Status.SUCCESS)
                 {
                     viewmodel.cancelJob()
-                    if((it.Response as List<Video>).size>0)
+                    if((it?.Response as List<*>).size>0)
                     {
                         tvWarning.visibility = View.GONE
                         supportFragmentManager.beginTransaction().
@@ -66,16 +62,10 @@ class AllVideos : AppCompatActivity() {
     }
 
     private fun isInternetAvailable(): Boolean {
-        var connected = false
         val connectivityManager =
             getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        connected =
-            if (connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).state == NetworkInfo.State.CONNECTED ||
-                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).state == NetworkInfo.State.CONNECTED
-            ) { //we are connected to a network
-                true
-            } else false
-        return connected
+        return connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)?.state == NetworkInfo.State.CONNECTED ||
+            connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)?.state == NetworkInfo.State.CONNECTED
     }
 
     private fun hideSystemUI() {
