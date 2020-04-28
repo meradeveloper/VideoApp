@@ -23,3 +23,9 @@ This demo App provide the basic feature of apps like Tiktop and likee, which is 
 
 ![1](https://user-images.githubusercontent.com/26268361/80478275-ee8d5580-896a-11ea-9d7f-f8bfe4e37c43.png)
 ![2](https://user-images.githubusercontent.com/26268361/80478278-efbe8280-896a-11ea-8308-96ff87e6536b.png)
+
+# Note
+Add google-services.json file of your own firebase account for more storage
+and can download apk from given link:-
+https://drive.google.com/open?id=1R0xXdx2dJfTzWWsvgp_rQE_vkDvjVAFM
+
