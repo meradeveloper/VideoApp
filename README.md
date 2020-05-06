@@ -1,5 +1,5 @@
 # VideoApp
-This demo App provide the basic feature of apps like Tiktop and likee, which is developed in Kotlin, MVVM Architecture, Firebase, MVVM, Dagger2, Coroutine, livedata  
+This demo App provide the basic feature of apps like Tiktok and likee, which is developed in Kotlin, MVVM Architecture, Firebase, MVVM, Dagger2, Coroutine, livedata  
 
 # Prerequisites
 •	Supported Android 5.0 or newer
